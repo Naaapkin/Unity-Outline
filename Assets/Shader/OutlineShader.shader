@@ -25,14 +25,13 @@ Shader "Addition/Post-processing/Outline"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DeclareNormalsTexture.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DeclareOpaqueTexture.hlsl"
 
+            CBUFFER_START(UnityPerMaterial)
             float _Width;
             float4 _Color;
             float _DistanceThreshold;
             float _NormalThreshold;
             float _DistanceLimit;
             float _NormalThresholdScale;
-            
-            CBUFFER_START(UnityPerMaterial)
             CBUFFER_END
 
             struct VertexInfo
