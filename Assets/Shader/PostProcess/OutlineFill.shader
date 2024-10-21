@@ -49,8 +49,10 @@ Shader "Custom/OutlineFill"
 
             #pragma multi_compile _ TANGENT_SPACE
 
+            CBUFFER_START(UnityPerMaterial)
             float4 _OutlineColor;
             float _OutlineWidth;
+            CBUFFER_END
 
             Varyings vert (Attributes i)
             {
